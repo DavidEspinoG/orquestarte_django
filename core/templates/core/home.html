@@ -1,0 +1,44 @@
+{% extends "core/base.html" %}
+{% block content %}
+{% load static %}
+<div class="contenedor titulo">
+    <h1>TESTIMONIOS</h1>
+</div>
+<div class="contenedor-testimonial">
+    <div class="cuadro-testimonial">
+        <div>
+            <img src="{% static 'core/img/testimonial1.jpeg' %}" class="imagen-testimonial" alt="imagen-piano">
+        </div>
+        <div class="cita">
+            <blockquote>
+                <p class="texto-testimonial" >"Gracias a los profesores por despertar el amor por el arte y la música en nuestros hijos." </p>
+                <span class="autor-testimonial" >Ericka Avilés</span>
+            </blockquote>
+        </div>
+    </div>
+    <div class="cuadro-testimonial">
+        <div class="cita">
+            <blockquote>
+                <p class="texto-testimonial2" >"Es impresionante cómo lograron tan buenos resultados a pesar de la distancia, son un ejemplo de creatividad." </p>
+                <span class="autor-testimonial" >María Eugenia Flores</span>
+            </blockquote>
+        </div>
+        <div>
+            <img src="{% static 'core/img/testimonial2.jpeg' %}" class="imagen-testimonial" alt="imagen-piano">
+        </div>
+    </div>
+    <div class="cuadro-testimonial">
+        
+        <div>
+            <img src="{% static 'core/img/testimonial3.jpeg' %}" class="imagen-testimonial" alt="imagen-piano">
+        </div>
+        <div class="cita">
+            <blockquote>
+                <p class="texto-testimonial2" >"Mi más sincero agradecimiento a los profesores, mi admiración por su paciencia y dedicación." </p>
+                <span class="autor-testimonial" >Samuel López </span>
+            </blockquote>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
