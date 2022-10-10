@@ -20,14 +20,14 @@
         <div class="contenedor">
             <div class="barra"> 
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="{% url 'home' %}">
                         <h1 class="logo__linea1">ORQUESTARTE</h1>
                         <h2 class="logo__linea2">EDUCACIÓN MUSICAL</h2>
                     </a>
                 </div>
                 <div class="navegacion">
-                    <a href="virtuales.html" class="navegacion__enlaces">clases virtuales</a>
-                    <a href="presenciales.html" class="navegacion__enlaces">clases presenciales</a>
+                    <a href="{% url 'virtuales' %}" class="navegacion__enlaces">clases virtuales</a>
+                    <a href="{% url 'presenciales' %}" class="navegacion__enlaces">clases presenciales</a>
                     <a href="recitales.html" class="navegacion__enlaces">Recitales</a>
                 </div>
             </div>

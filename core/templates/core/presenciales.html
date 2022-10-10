@@ -1,0 +1,55 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<main class="contenedor">
+    <h1 class="centrar-texto">CLASES DE PIANO</h1>
+    <h2 class="centrar-texto">Mérida, Yucatán</h2>
+    <div class="grid-yucatan">
+        <div class="caja-yucatan">
+            <div class="texto-yucatan">
+                <p>CLASES COMPLETAMENTE INDIVIDUALES</p>
+            </div>
+            <div>
+                <img class="imagen-yucatan" src="{% static 'core/img/yucatan1.jpeg' %}" alt="maestro de piano">
+            </div>
+        </div>
+        <div class="caja-yucatan">
+            <div class="texto-yucatan">
+                <p>PARA TODAS LAS EDADES Y NIVELES</p>
+            </div>
+            <div>
+                <img  class="imagen-yucatan" src="{% static 'core/img/yucatan2.jpeg' %}" alt="maestro de piano">
+            </div>
+        </div>
+        <div class="caja-yucatan">
+            <div class="texto-yucatan">
+                <p>CLASE MUESTRA COMPLETAMENTE GRATUITA</p>
+            </div>
+            <div>
+                <img  class="imagen-yucatan" src="{% static 'core/img/yucatan3.jpeg' %}" alt="maestro de piano">
+            </div>
+        </div>
+        <div class="caja-yucatan">
+            <div class="texto-yucatan">
+                <p>MAESTROS EGRESADOS DE LA FACULTAD DE MÚSICA DE LA UNAM</p>
+            </div>
+            <div class="unam">
+                <img class="imagen-yucatan" src="{% static 'core/img/yucatan4.jpeg' %}" alt="maestro de piano">
+            </div>
+        </div>
+
+    </div>
+
+</main>
+<div class="contenedor centrar-texto">
+    <h1>¡Visítanos!</h1>
+    <img src="{% static 'core/img/mapa.jpeg' %}" alt="mapa">
+    <div class= "caja direccion">
+        <p>Calle 140 #239 X 59E y 59D Las Américas, Mérida. Yucatán</p>
+    </div>
+    <div class= "caja clase-prueba">
+        <a href="https://wa.me/message/JVH4TZ454YCVM1"><p>¡Agenda tu clase muestra gratuita!</p></a>
+    </div>
+</div>
+{% endblock %}

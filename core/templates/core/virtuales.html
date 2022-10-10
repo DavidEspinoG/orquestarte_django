@@ -1,0 +1,44 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="contenedor titulo">
+    <h1>CLASES VIRTUALES</h1>
+</div>
+
+<div class="grid-instrumentos contenedor">
+   <div class="cuadro-instrumento">
+       <img src="{% static 'core/img/virtual1.jpeg' %}" alt="guitarra">
+       <a href="https://youtu.be/T2wYB0xvd4w">guitarra</a>
+   </div>
+   <div class="cuadro-instrumento">
+    <img src="{% static 'core/img/virtual2.jpeg' %}" alt="violin">
+    <a href="https://youtu.be/l47js7U-UWk">violín</a>
+    </div>
+    <div class="cuadro-instrumento">
+        <img src="{% static 'core/img/virtual3.jpeg' %}" alt="flauta">
+        <a href="https://youtu.be/ZQWx8-AXfZs">flauta</a>
+    </div>
+    <div class="cuadro-instrumento">
+        <img src="{% static 'core/img/virtual4.jpeg' %}" alt="piano">
+        <a href="https://youtu.be/wn9hcTuTgH0">piano</a>
+    </div>
+    <div class="cuadro-instrumento">
+        <img src="{% static 'core/img/virtual5.jpeg' %}" alt="canto">
+        <a href="https://youtu.be/odur-Lg8fBw">canto</a>
+    </div>
+    <div class="cuadro-instrumento">
+        <img src="{% static 'core/img/virtual6.jpeg' %}" alt="cello">
+        <a href="https://youtu.be/dWSITx_qPzk">cello</a>
+    </div> 
+</div>
+<div class="flex-agenda contenedor">
+   <div>
+        <img src="{% static 'core/img/virtual7.jpeg' %}" alt="clase virtual">
+   </div>
+    <div class="agenda">
+        <a href="https://wa.me/message/JVH4TZ454YCVM1" class="mailto">¡agenda tu clase muestra!</a>
+    </div>
+</div>
+
+{% endblock %}

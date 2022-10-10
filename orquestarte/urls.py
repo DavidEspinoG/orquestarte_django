@@ -18,5 +18,7 @@ from django.urls import path
 from core import views as core_views
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', core_views.home),
+    path('', core_views.home, name="home"),
+    path('virtuales', core_views.virtuales, name="virtuales"),
+    path('presenciales', core_views.presenciales, name="presenciales"),
 ]
