@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from core import views as core_views
+from recitales import views as recitales_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', core_views.home, name="home"),
     path('virtuales', core_views.virtuales, name="virtuales"),
     path('presenciales', core_views.presenciales, name="presenciales"),
-    path('recitales', core_views.recitales, name="recitales"),
+    path('recitales', recitales_views.recitales, name="recitales"),
 ]
