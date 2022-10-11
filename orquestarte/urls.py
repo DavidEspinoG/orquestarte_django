@@ -21,4 +21,5 @@ urlpatterns = [
     path('', core_views.home, name="home"),
     path('virtuales', core_views.virtuales, name="virtuales"),
     path('presenciales', core_views.presenciales, name="presenciales"),
+    path('recitales', core_views.recitales, name="recitales"),
 ]
