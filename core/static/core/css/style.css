@@ -543,6 +543,6 @@ img {
         white-space: -moz-pre-wrap;
         white-space: -o-pre-wrap;
 }
-/* .participacion {
-    margin
-} */
+.participacion {
+    text-align: center;
+}

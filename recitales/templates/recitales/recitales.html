@@ -10,7 +10,7 @@
 <div class="contenedor contenedor-recitales">
     {% for recital in recitales%}
     <div class="cuadro-recital">
-        <a href="./recitales/presencial1.html"><h1>{{recital.title}}</h1></a>
+        <a href="{% url 'recital' recital.id %}"><h1>{{recital.title}}</h1></a>
     </div>
     {% endfor %}
 </div>

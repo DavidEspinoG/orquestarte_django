@@ -1,11 +1,9 @@
-from email.policy import default
-from tabnanny import verbose
-from unittest.util import _MAX_LENGTH
 from django.db import models
 
 # Create your models here.
 class Recital(models.Model):
     title = models.CharField(max_length=30, verbose_name="Título")
+    date = models.DateTimeField(auto_now_add=False, auto_now=False, blank=True)
     created = models.DateField(auto_now_add=True)
     updated = models.DateField(auto_now=True)
     class Meta: 

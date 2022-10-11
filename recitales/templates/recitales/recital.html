@@ -1,0 +1,28 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="contenedor titulo">
+    <h1 class="titulo-recital">{{recital.title}}</h1>
+    <h2 class="hora-recital">{{recital.date}}</h2>
+</div>
+<div id="programa" class="contenedor programa">
+    {% for participacion in participaciones %}
+    <div class="participacion">
+        <p class="alumno">{{participacion.student}}</p>
+        <div class="repertorio">
+            <p class="pieza">{{participacion.piece}}</p>
+            <p class="compositor">{{participacion.composer}}</p>
+        </div>
+        <p class="maestro">{{participacion.teacher}}</p>
+    </div>
+    {% endfor %}
+    <!-- <p class="alumno">Mateo Joab Carballo Lucero</p>
+    <div class="repertorio">
+        <p class="pieza">Perpetual motion (Tema y variación)</p>
+        <p class="compositor">S. Suzuki</p>
+    </div>
+    <p class="maestro">Maestr@: Ulises Juárez</p> -->
+</div>
+{% endblock %}

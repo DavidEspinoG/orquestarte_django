@@ -23,4 +23,5 @@ urlpatterns = [
     path('virtuales', core_views.virtuales, name="virtuales"),
     path('presenciales', core_views.presenciales, name="presenciales"),
     path('recitales', recitales_views.recitales, name="recitales"),
+    path('recital/<int:recital_id>', recitales_views.recital, name="recital"),
 ]
