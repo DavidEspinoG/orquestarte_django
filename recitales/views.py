@@ -1,5 +1,6 @@
 from django.shortcuts import render
-
+from .models import Recital
 # Create your views here.
 def recitales(request):
-    return render(request, 'recitales/recitales.html')
+    recitales = Recital.objects.all()
+    return render(request, 'recitales/recitales.html', {'recitales': recitales})
