@@ -134,5 +134,5 @@ dmypy.json
 
 #imgs
 # img/
-*.jpeg
-*.jpg
+# *.jpeg
+# *.jpg
