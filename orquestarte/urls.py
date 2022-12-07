@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path
 from core import views as core_views
 from recitales import views as recitales_views
+from pedidos import views as pedidos_views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', core_views.home, name="home"),
@@ -24,4 +26,5 @@ urlpatterns = [
     path('presenciales', core_views.presenciales, name="presenciales"),
     path('recitales', recitales_views.recitales, name="recitales"),
     path('recital/<int:recital_id>', recitales_views.recital, name="recital"),
+    path('carrito', pedidos_views.Pedido.as_view(), name="carrito"),
 ]

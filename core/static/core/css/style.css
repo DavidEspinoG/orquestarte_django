@@ -111,10 +111,6 @@ img {
     padding-top: 1rem;
     padding-bottom: 2rem;
     background-color: var(--gris);   
-    /* position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%; */
 }
 .mailto {
     color:#fff;
@@ -242,7 +238,7 @@ img {
     background-color: var(--amarillo);
     padding: 1.5rem;
     border-radius: 5px;
-    text-align: center;
+    /* text-align: center; */
 }
 @media (max-width: 972px) {
     .cuadro-instrumento {
@@ -253,13 +249,28 @@ img {
     border-radius: 5px;
     margin-bottom: 1rem;
 }
-.cuadro-instrumento a {
+.cuadro-instrumento p {
     font-family: var(--fuenteCitas);
     color: var(--gris);
     font-size: 4rem;
+    margin: 0;
 }
 .cuadro-instrumento a:hover {
     color: var(--naranja);
+}
+.clase-info {
+    display: flex;
+    justify-content: space-between;
+}
+.cuadro-instrumento button {
+    background-color: var(--naranja);
+    border: none;
+    color: var(--blanco);
+    display: inline-block;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    padding: 1rem;
 }
 .flex-agenda {
    display: grid;
