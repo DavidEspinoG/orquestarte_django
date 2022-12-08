@@ -9,12 +9,14 @@
 <div class="grid-instrumentos contenedor">
     {% for element in object_list %}
         <div class="cuadro-instrumento">
+            
             <img src="{{element.image.url}}" alt="guitarra">
-            <div class="clase-info">
-                <p>{{element.title}}</p>
-                <p>${{element.price}}</p>
-            </div>
-            <button type="button">Agregar al carrito</button>
+
+                <div class="clase-info">
+                    <p>{{element.title}}</p>
+                    <p>${{element.price}}</p>
+                </div>
+                <button type="button" onclick="agregarElemento('{{element.title}}', {{element.price}})">Agregar al carrito</button>
         </div>
    {% endfor %}
    

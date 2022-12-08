@@ -35,7 +35,6 @@
 
         </div>
     </header>
-    
     {% block content %} {% endblock %}
     <footer>
         <div class="footer">
@@ -48,6 +47,31 @@
             </div> 
         </div>
     </footer>
+    <script>
+        function agregarElemento(title, price){
+            parsedItem = JSON.parse(localStorage.getItem('cart')) 
+            if(!parsedItem){
+                toSave = []
+                toSave.push({'title':title, 'price':price})
+                stringifiedItem = JSON.stringify(toSave)
+                localStorage.setItem('cart', stringifiedItem)
+            } else {
+                toSave = []
+                toSave.push(...parsedItem)
+                toSave.push({'title':title, 'price':price})
+                stringifiedItem = JSON.stringify(toSave)
+                localStorage.setItem('cart', stringifiedItem)
+            }
+        }
+        if(location.pathname === '/carrito'){
+            shopElements = JSON.parse(localStorage.getItem('cart'))
+            if(shopElements){
+                for(e in shopElements){
+                    console.log(shopElements[e])
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>
