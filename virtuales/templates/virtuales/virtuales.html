@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="contenedor titulo">
+    <h1>CLASES VIRTUALES</h1>
+</div>
+
+<div class="grid-instrumentos contenedor">
+    {% for element in object_list %}
+        <div class="cuadro-instrumento">
+            <img src="{{element.image.url}}" alt="guitarra">
+            <div class="clase-info">
+                <p>{{element.title}}</p>
+                <p>${{element.price}}</p>
+            </div>
+            <button type="button">Agregar al carrito</button>
+        </div>
+   {% endfor %}
+   
+</div>
+<div class="flex-agenda contenedor">
+   <div>
+        <img src="{% static 'core/img/virtual7.jpeg' %}" alt="clase virtual">
+   </div>
+    <div class="agenda">
+        <a href="https://wa.me/message/JVH4TZ454YCVM1" class="mailto">¡agenda tu clase muestra!</a>
+    </div>
+</div>
+
+{% endblock %}

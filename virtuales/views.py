@@ -1,3 +1,7 @@
 from django.shortcuts import render
+from django.views.generic import ListView
+from .models import ClaseVirtual
 
-# Create your views here.
+class Virtuales(ListView):
+    template_name = 'virtuales/virtuales.html'
+    model = ClaseVirtual
