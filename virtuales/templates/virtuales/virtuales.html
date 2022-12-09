@@ -16,18 +16,13 @@
                     <p>{{element.title}}</p>
                     <p>${{element.price}}</p>
                 </div>
-                <button type="button" onclick="agregarElemento('{{element.title}}', {{element.price}})">Agregar al carrito</button>
+                <a href="{% url 'pedido' element.price element.title%}">
+                    <button type="button">Agregar al carrito</button>
+                </a>
         </div>
    {% endfor %}
    
 </div>
-<div class="flex-agenda contenedor">
-   <div>
-        <img src="{% static 'core/img/virtual7.jpeg' %}" alt="clase virtual">
-   </div>
-    <div class="agenda">
-        <a href="https://wa.me/message/JVH4TZ454YCVM1" class="mailto">¡agenda tu clase muestra!</a>
-    </div>
-</div>
+
 
 {% endblock %}

@@ -272,6 +272,9 @@ img {
     font-size: 1.6rem;
     padding: 1rem;
 }
+.cuadro-instrumento button:hover {
+    cursor: pointer;
+}
 .flex-agenda {
    display: grid;
    grid-template-columns: 2fr 1fr;

@@ -23,7 +23,8 @@ from . import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', core_views.home, name="home"),
-    path('virtuales', virtuales_views.Virtuales.as_view(), name="virtuales"),
+    path('virtuales', virtuales_views.virtuales, name="virtuales"),
+    path('pedido/<int:price>/<str:title>', virtuales_views.guardaPedido, name="pedido"),
     path('presenciales', core_views.presenciales, name="presenciales"),
     path('recitales', recitales_views.recitales, name="recitales"),
     path('recital/<int:recital_id>', recitales_views.recital, name="recital"),
