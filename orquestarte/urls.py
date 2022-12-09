@@ -28,7 +28,7 @@ urlpatterns = [
     path('presenciales', core_views.presenciales, name="presenciales"),
     path('recitales', recitales_views.recitales, name="recitales"),
     path('recital/<int:recital_id>', recitales_views.recital, name="recital"),
-    path('carrito', pedidos_views.Pedido.as_view(), name="carrito"),
+    path('carrito', pedidos_views.pedido, name="carrito"),
 ]
 if settings.DEBUG:
     from django.conf.urls.static import static

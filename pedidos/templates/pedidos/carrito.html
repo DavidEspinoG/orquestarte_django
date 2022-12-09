@@ -1,7 +1,19 @@
 {% extends 'core/base.html' %}
 
 {% block content %}
-<div class="contenedor" id="app">
-    
+<div class="contenedor">
+    <div class="carrito-background">
+        {% for element in pedido %}
+        <div class="carrito">
+            <p>{{element.title}}</p>
+            <p>${{element.price}}</p>
+        </div>
+        {% endfor %}
+        <div class="carrito">
+            <p>Total:</p>
+            <p>${{total}}</p>
+        </div>
+        
+    </div>
 </div>
 {% endblock %}

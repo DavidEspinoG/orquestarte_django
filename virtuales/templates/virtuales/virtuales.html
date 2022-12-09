@@ -1,28 +1,26 @@
 {% extends 'core/base.html' %}
 {% load static %}
-
+{% load myTags %}
 {% block content %}
 <div class="contenedor titulo">
     <h1>CLASES VIRTUALES</h1>
 </div>
-
 <div class="grid-instrumentos contenedor">
     {% for element in object_list %}
         <div class="cuadro-instrumento">
-            
             <img src="{{element.image.url}}" alt="guitarra">
-
                 <div class="clase-info">
                     <p>{{element.title}}</p>
                     <p>${{element.price}}</p>
                 </div>
-                <a href="{% url 'pedido' element.price element.title%}">
-                    <button type="button">Agregar al carrito</button>
-                </a>
+                <a href="{% url 'pedido' element.price element.title %}">
+                    {% if element.title|isOnCart %}
+                        <button type="button" class='comprado'>Comprado</button>
+                    {% else %}
+                        <button type="button">Agregar al carrito</button>
+                    {% endif %}
+                </a>    
         </div>
    {% endfor %}
-   
 </div>
-
-
 {% endblock %}

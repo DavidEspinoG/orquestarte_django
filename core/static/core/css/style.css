@@ -560,3 +560,20 @@ img {
 .participacion {
     text-align: center;
 }
+.cuadro-instrumento .comprado  {
+    background-color: goldenrod;
+}
+.carrito-background {
+    background-color: var(--amarillo);
+    width: 90%;
+    max-width: 350px ;
+    margin: 0 auto 2.5rem;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+.carrito {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--blanco);
+    border-bottom: 1px solid var(--gris);
+}
