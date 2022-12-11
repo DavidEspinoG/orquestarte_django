@@ -30,6 +30,12 @@
                     <!-- <a href="{% url 'presenciales' %}" class="navegacion__enlaces">clases presenciales</a> -->
                     <a href="{% url 'recitales' %}" class="navegacion__enlaces">Recitales</a>
                     <a href="{% url 'carrito' %}" class="navegacion__enlaces">Carrito</a>
+                    {% if not request.user.is_authenticated %}
+                    <a href="{% url 'signup' %}" class="navegacion__enlaces">Registrarse</a>
+                    <a href="{% url 'login' %}" class="navegacion__enlaces">Ingresar</a>
+                    {% else %}
+                    <a href="{% url 'logout' %}" class="navegacion__enlaces">Salir</a>
+                    {% endif %}
                 </div>
             </div>
 

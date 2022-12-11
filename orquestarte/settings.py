@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'recitales',
     'pedidos',
     'virtuales',
+    'registration',
 ]
 
 MIDDLEWARE = [

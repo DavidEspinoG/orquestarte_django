@@ -20,6 +20,8 @@ from recitales import views as recitales_views
 from pedidos import views as pedidos_views
 from virtuales import views as virtuales_views
 from . import settings
+from registration import views as registration_views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', core_views.home, name="home"),
@@ -29,6 +31,9 @@ urlpatterns = [
     path('recitales', recitales_views.recitales, name="recitales"),
     path('recital/<int:recital_id>', recitales_views.recital, name="recital"),
     path('carrito', pedidos_views.pedido, name="carrito"),
+    path('signup', registration_views.SignUp.as_view(), name="signup"),
+    path('login', registration_views.loginView, name="login"),
+    path('logout', core_views.logout_view, name="logout"),
 ]
 if settings.DEBUG:
     from django.conf.urls.static import static
